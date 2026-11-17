@@ -1,0 +1,310 @@
+{
+  "users": [
+    {
+      "id": "usr_admin",
+      "name": "Admin Lead",
+      "email": "admin@brightloop.com",
+      "password": "Brightloop@2026",
+      "role": "admin",
+      "company_name": "Brightloop HQ"
+    },
+    {
+      "id": "usr_staff",
+      "name": "Sara Sales Rep",
+      "email": "staff@brightloop.com",
+      "password": "Staff@2026",
+      "role": "staff",
+      "company_name": "Brightloop Sales"
+    },
+    {
+      "id": "usr_cust_shop",
+      "name": "Corner Bakery",
+      "email": "shop@customer.com",
+      "password": "Customer@2026",
+      "role": "customer",
+      "company_name": "Corner Bakery Ltd"
+    },
+    {
+      "id": "usr_cust_acme",
+      "name": "Acme Global Tech",
+      "email": "enterprise@acme.com",
+      "password": "Acme@2026",
+      "role": "customer",
+      "company_name": "Acme Global Corporation"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_erp",
+      "name": "Brightloop Core ERP",
+      "type": "software",
+      "sales_price": 1500.0,
+      "cost_price": 400.0,
+      "notes": "Comprehensive business resource planning suite",
+      "variants": [
+        { "name": "Standard Community", "extra_price": 0 },
+        { "name": "Odoo Brand Edition", "extra_price": 560 }
+      ]
+    },
+    {
+      "id": "prod_analytics",
+      "name": "Advanced Analytics Addon",
+      "type": "addon",
+      "sales_price": 350.0,
+      "cost_price": 50.0,
+      "notes": "Real-time pipeline analytics, revenue forecasting",
+      "variants": [
+        { "name": "Standard Analytics", "extra_price": 0 },
+        { "name": "Enterprise AI Insights", "extra_price": 200 }
+      ]
+    },
+    {
+      "id": "prod_billing",
+      "name": "Automated Recurring Billing Engine",
+      "type": "software",
+      "sales_price": 450.0,
+      "cost_price": 90.0,
+      "notes": "Automated billing run and bank matching",
+      "variants": []
+    },
+    {
+      "id": "prod_sla",
+      "name": "24/7 Dedicated Support SLA",
+      "type": "service",
+      "sales_price": 250.0,
+      "cost_price": 50.0,
+      "notes": "15-minute response SLA",
+      "variants": []
+    }
+  ],
+  "plans": [
+    {
+      "id": "plan_monthly",
+      "name": "Brightloop Professional (Monthly)",
+      "cost": 99.0,
+      "billing_frequency": "monthly",
+      "min_quantity": 1,
+      "auto_close_on_end": false,
+      "is_active": true
+    },
+    {
+      "id": "plan_yearly",
+      "name": "Brightloop Enterprise (Yearly Contract)",
+      "cost": 999.0,
+      "billing_frequency": "yearly",
+      "min_quantity": 5,
+      "auto_close_on_end": false,
+      "is_active": true
+    },
+    {
+      "id": "plan_weekly",
+      "name": "Rapid Growth Sprint (Weekly)",
+      "cost": 35.0,
+      "billing_frequency": "weekly",
+      "min_quantity": 1,
+      "auto_close_on_end": true,
+      "is_active": true
+    },
+    {
+      "id": "plan_daily",
+      "name": "Sandbox Pilot Pass (Daily)",
+      "cost": 10.0,
+      "billing_frequency": "daily",
+      "min_quantity": 1,
+      "auto_close_on_end": true,
+      "is_active": true
+    }
+  ],
+  "discounts": [
+    {
+      "id": "disc_seats",
+      "name": "Multi-Seat High Volume (15% Off)",
+      "code": "SEATS15",
+      "type": "percentage",
+      "value": 15.0,
+      "min_purchase": 0,
+      "min_quantity": 5,
+      "max_uses": 50,
+      "current_uses": 3,
+      "scope": "whole_subscription",
+      "is_active": true
+    },
+    {
+      "id": "disc_fixed",
+      "name": "Early Adopter Welcome Voucher ($50 Off)",
+      "code": "WELCOME50",
+      "type": "fixed",
+      "value": 50.0,
+      "min_purchase": 200.0,
+      "min_quantity": 1,
+      "max_uses": 100,
+      "current_uses": 12,
+      "scope": "whole_subscription",
+      "is_active": true
+    }
+  ],
+  "templates": [
+    {
+      "id": "tpl_enterprise",
+      "name": "Enterprise Software Bundle Template",
+      "plan_id": "plan_yearly",
+      "validity_days": 30,
+      "lines": [
+        { "product_id": "prod_erp", "variant_name": "Odoo Brand Edition", "quantity": 5, "unit_price": 2060.0, "tax_rate": 18.0 },
+        { "product_id": "prod_analytics", "variant_name": "Enterprise AI Insights", "quantity": 5, "unit_price": 550.0, "tax_rate": 18.0 }
+      ]
+    },
+    {
+      "id": "tpl_shop",
+      "name": "Small Business Quick-Start Template",
+      "plan_id": "plan_monthly",
+      "validity_days": 14,
+      "lines": [
+        { "product_id": "prod_erp", "variant_name": "Standard Community", "quantity": 1, "unit_price": 1500.0, "tax_rate": 18.0 },
+        { "product_id": "prod_billing", "variant_name": null, "quantity": 1, "unit_price": 450.0, "tax_rate": 18.0 }
+      ]
+    }
+  ],
+  "quotations": [
+    {
+      "id": "quo_001",
+      "quote_number": "QUO-2026-0001",
+      "customer_id": "usr_cust_shop",
+      "plan_id": "plan_monthly",
+      "status": "Draft",
+      "valid_until": "2026-12-01",
+      "payment_terms": "net_15",
+      "subtotal": 1950.0,
+      "tax_amount": 351.0,
+      "total_amount": 2301.0,
+      "lines": [
+        { "product_name": "Brightloop Core ERP", "quantity": 1, "unit_price": 1500.0, "tax_rate": 18.0, "amount": 1770.0 },
+        { "product_name": "Automated Recurring Billing Engine", "quantity": 1, "unit_price": 450.0, "tax_rate": 18.0, "amount": 531.0 }
+      ]
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub_001",
+      "sub_number": "SUB-2026-0001",
+      "customer_id": "usr_cust_acme",
+      "customer_name": "Acme Global Tech",
+      "plan_id": "plan_yearly",
+      "plan_name": "Brightloop Enterprise (Yearly Contract)",
+      "billing_frequency": "yearly",
+      "status": "Active",
+      "start_date": "2026-01-01",
+      "expiry_date": "2027-01-01",
+      "payment_terms": "net_30",
+      "next_billing_date": "2026-11-04",
+      "lines": [
+        { "product_name": "Brightloop Core ERP", "variant_name": "Odoo Brand Edition", "quantity": 5, "unit_price": 2060.0, "amount": 10300.0 },
+        { "product_name": "Advanced Analytics Addon", "variant_name": "Enterprise AI Insights", "quantity": 5, "unit_price": 550.0, "amount": 2750.0 }
+      ]
+    },
+    {
+      "id": "sub_002",
+      "sub_number": "SUB-2026-0002",
+      "customer_id": "usr_cust_shop",
+      "customer_name": "Corner Bakery",
+      "plan_id": "plan_monthly",
+      "plan_name": "Brightloop Professional (Monthly)",
+      "billing_frequency": "monthly",
+      "status": "Active",
+      "start_date": "2026-02-01",
+      "expiry_date": "2027-02-01",
+      "payment_terms": "net_15",
+      "next_billing_date": "2026-11-04",
+      "lines": [
+        { "product_name": "Brightloop Core ERP", "variant_name": "Standard Community", "quantity": 1, "unit_price": 1500.0, "amount": 1500.0 }
+      ]
+    },
+    {
+      "id": "sub_003",
+      "sub_number": "SUB-2026-0003",
+      "customer_id": "usr_cust_shop",
+      "customer_name": "Corner Bakery",
+      "plan_id": "plan_monthly",
+      "plan_name": "Brightloop Professional (Monthly)",
+      "billing_frequency": "monthly",
+      "status": "Quotation",
+      "start_date": "2026-11-04",
+      "expiry_date": "2026-12-04",
+      "payment_terms": "net_15",
+      "lines": [
+        { "product_name": "Automated Recurring Billing Engine", "variant_name": null, "quantity": 1, "unit_price": 450.0, "amount": 450.0 }
+      ]
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv_001",
+      "invoice_number": "INV-2026-0001",
+      "subscription_id": "sub_001",
+      "sub_number": "SUB-2026-0001",
+      "customer_id": "usr_cust_acme",
+      "customer_name": "Acme Global Tech",
+      "status": "Paid",
+      "issue_date": "2026-10-04",
+      "due_date": "2026-11-04",
+      "subtotal": 13050.0,
+      "discount_amount": 1957.5,
+      "tax_amount": 1996.65,
+      "total_amount": 13089.15,
+      "lines": [
+        { "product_name": "Brightloop Core ERP (Odoo Brand Edition)", "quantity": 5, "unit_price": 2060.0, "total": 10300.0 },
+        { "product_name": "Advanced Analytics Addon", "quantity": 5, "unit_price": 550.0, "total": 2750.0 }
+      ]
+    },
+    {
+      "id": "inv_002",
+      "invoice_number": "INV-2026-0002",
+      "subscription_id": "sub_002",
+      "sub_number": "SUB-2026-0002",
+      "customer_id": "usr_cust_shop",
+      "customer_name": "Corner Bakery",
+      "status": "Confirmed",
+      "issue_date": "2026-10-15",
+      "due_date": "2026-10-30",
+      "subtotal": 1500.0,
+      "discount_amount": 0,
+      "tax_amount": 270.0,
+      "total_amount": 1770.0,
+      "is_overdue": true,
+      "lines": [
+        { "product_name": "Brightloop Core ERP", "quantity": 1, "unit_price": 1500.0, "total": 1500.0 }
+      ]
+    },
+    {
+      "id": "inv_003",
+      "invoice_number": "INV-2026-0003",
+      "subscription_id": null,
+      "sub_number": null,
+      "customer_id": "usr_cust_shop",
+      "customer_name": "Corner Bakery",
+      "status": "Draft",
+      "issue_date": "2026-11-04",
+      "due_date": "2026-12-04",
+      "subtotal": 450.0,
+      "discount_amount": 0,
+      "tax_amount": 81.0,
+      "total_amount": 531.0,
+      "is_overdue": false,
+      "lines": [
+        { "product_name": "Automated Recurring Billing Engine", "quantity": 1, "unit_price": 450.0, "total": 450.0 }
+      ]
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay_001",
+      "invoice_id": "inv_001",
+      "invoice_number": "INV-2026-0001",
+      "customer_name": "Acme Global Tech",
+      "method": "Bank Transfer",
+      "amount": 13089.15,
+      "payment_date": "2026-10-05",
+      "note": "Annual enterprise contract wire transfer"
+    }
+  ]
+}

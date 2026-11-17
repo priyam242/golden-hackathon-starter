@@ -1,0 +1,9 @@
+{
+  "preset": "mono",
+  "strictMonochrome": false,
+  "allowSemanticColors": true,
+  "accentPrimary": "#000000",
+  "fontFamily": "Bell MT",
+  "weights": [400, 700],
+  "version": "2.0.0"
+}

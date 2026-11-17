@@ -1,0 +1,40 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--fg);
+  font-synthesis: none;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+/* 3-Color Gradient Text Utilities */
+.text-gradient {
+  color: var(--text-g1);
+  background-image: linear-gradient(90deg, var(--text-g1), var(--text-g2), var(--text-g3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.text-gradient-inverse {
+  color: var(--inv-g1);
+  background-image: linear-gradient(90deg, var(--inv-g1), var(--inv-g2), var(--inv-g3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

@@ -1,0 +1,187 @@
+{
+  "system": "Brightloop Software Subscription Management",
+  "users": [
+    {
+      "id": "usr_admin",
+      "name": "Admin Lead",
+      "email": "admin@brightloop.com",
+      "password": "Brightloop@2026",
+      "role": "admin",
+      "company_name": "Brightloop Software HQ"
+    },
+    {
+      "id": "usr_staff",
+      "name": "Sara Sales Rep",
+      "email": "staff@brightloop.com",
+      "password": "Staff@2026",
+      "role": "staff",
+      "company_name": "Brightloop Sales"
+    },
+    {
+      "id": "usr_cust_shop",
+      "name": "Corner Bakery",
+      "email": "shop@customer.com",
+      "password": "Customer@2026",
+      "role": "customer",
+      "company_name": "Corner Bakery Ltd"
+    },
+    {
+      "id": "usr_cust_acme",
+      "name": "Acme Global Tech",
+      "email": "enterprise@acme.com",
+      "password": "Acme@2026",
+      "role": "customer",
+      "company_name": "Acme Global Corporation"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_erp",
+      "name": "Brightloop Core ERP",
+      "type": "software",
+      "sales_price": 1500.0,
+      "cost_price": 400.0,
+      "notes": "Comprehensive business resource planning suite",
+      "variants": [
+        { "name": "Standard Community", "extra_price": 0 },
+        { "name": "Odoo Brand Edition", "extra_price": 560 }
+      ]
+    },
+    {
+      "id": "prod_analytics",
+      "name": "Advanced Analytics Addon",
+      "type": "addon",
+      "sales_price": 350.0,
+      "cost_price": 50.0,
+      "notes": "Real-time pipeline analytics, revenue forecasting",
+      "variants": [
+        { "name": "Standard Analytics", "extra_price": 0 },
+        { "name": "Enterprise AI Insights", "extra_price": 200 }
+      ]
+    },
+    {
+      "id": "prod_billing",
+      "name": "Automated Recurring Billing Engine",
+      "type": "software",
+      "sales_price": 450.0,
+      "cost_price": 90.0,
+      "notes": "Automated billing run and bank matching",
+      "variants": []
+    },
+    {
+      "id": "prod_sla",
+      "name": "24/7 Dedicated Support SLA",
+      "type": "service",
+      "sales_price": 250.0,
+      "cost_price": 50.0,
+      "notes": "15-minute response SLA",
+      "variants": []
+    }
+  ],
+  "plans": [
+    {
+      "id": "plan_monthly",
+      "name": "Brightloop Professional (Monthly)",
+      "cost": 99.0,
+      "billing_frequency": "monthly",
+      "min_quantity": 1,
+      "auto_close_on_end": false
+    },
+    {
+      "id": "plan_yearly",
+      "name": "Brightloop Enterprise (Yearly Contract)",
+      "cost": 999.0,
+      "billing_frequency": "yearly",
+      "min_quantity": 5,
+      "auto_close_on_end": false
+    },
+    {
+      "id": "plan_weekly",
+      "name": "Rapid Growth Sprint (Weekly)",
+      "cost": 35.0,
+      "billing_frequency": "weekly",
+      "min_quantity": 1,
+      "auto_close_on_end": true
+    },
+    {
+      "id": "plan_daily",
+      "name": "Sandbox Pilot Pass (Daily)",
+      "cost": 10.0,
+      "billing_frequency": "daily",
+      "min_quantity": 1,
+      "auto_close_on_end": true
+    }
+  ],
+  "discounts": [
+    {
+      "id": "disc_seats",
+      "name": "Multi-Seat High Volume (15% Off)",
+      "code": "SEATS15",
+      "type": "percentage",
+      "value": 15.0,
+      "min_purchase": 0,
+      "min_quantity": 5,
+      "scope": "whole_subscription"
+    },
+    {
+      "id": "disc_fixed",
+      "name": "Early Adopter Welcome Voucher ($50 Off)",
+      "code": "WELCOME50",
+      "type": "fixed",
+      "value": 50.0,
+      "min_purchase": 200.0,
+      "min_quantity": 1,
+      "scope": "whole_subscription"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub_001",
+      "sub_number": "SUB-2026-0001",
+      "customer_id": "usr_cust_acme",
+      "plan_id": "plan_yearly",
+      "status": "Active",
+      "payment_terms": "net_30"
+    },
+    {
+      "id": "sub_002",
+      "sub_number": "SUB-2026-0002",
+      "customer_id": "usr_cust_shop",
+      "plan_id": "plan_monthly",
+      "status": "Active",
+      "payment_terms": "net_15"
+    },
+    {
+      "id": "sub_003",
+      "sub_number": "SUB-2026-0003",
+      "customer_id": "usr_cust_shop",
+      "plan_id": "plan_monthly",
+      "status": "Quotation",
+      "payment_terms": "net_15"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv_001",
+      "invoice_number": "INV-2026-0001",
+      "customer_id": "usr_cust_acme",
+      "status": "Paid",
+      "total_amount": 13089.15
+    },
+    {
+      "id": "inv_002",
+      "invoice_number": "INV-2026-0002",
+      "customer_id": "usr_cust_shop",
+      "status": "Confirmed",
+      "total_amount": 1770.0,
+      "is_overdue": true
+    },
+    {
+      "id": "inv_003",
+      "invoice_number": "INV-2026-0003",
+      "customer_id": "usr_cust_shop",
+      "status": "Draft",
+      "total_amount": 531.0
+    }
+  ]
+}

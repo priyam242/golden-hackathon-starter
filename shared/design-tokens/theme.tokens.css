@@ -1,0 +1,65 @@
+:root {
+  --font-body: 'Bell MT', 'BellMT', Georgia, 'Times New Roman', serif;
+  
+  /* Surfaces & Chrome (Light Mode) */
+  --bg: #ffffff;
+  --bg-subtle: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --fg: #000000;
+  --fg-muted: #525252;
+  --line: #e5e5e5;
+  --line-strong: #000000;
+  --inverse-bg: #000000;
+  --inverse-fg: #ffffff;
+  --focus: #000000;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  /* Primary Accent & Semantic Escape Hatch */
+  --accent-primary: #000000;
+  --accent-primary-fg: #ffffff;
+  --status-ok: #16a34a;
+  --status-warn: #d97706;
+  --status-danger: #dc2626;
+
+  /* Three-Color Grayscale Gradient Text */
+  --text-g1: #000000;
+  --text-g2: #333333;
+  --text-g3: #595959;
+
+  --inv-g1: #ffffff;
+  --inv-g2: #f1f5f9;
+  --inv-g3: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  /* Surfaces & Chrome (Dark Mode) */
+  --bg: #000000;
+  --bg-subtle: #0a0a0a;
+  --surface: #121212;
+  --surface-2: #1e1e1e;
+  --fg: #ffffff;
+  --fg-muted: #a3a3a3;
+  --line: #262626;
+  --line-strong: #ffffff;
+  --inverse-bg: #ffffff;
+  --inverse-fg: #000000;
+  --focus: #ffffff;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+  /* Primary Accent & Semantic Escape Hatch */
+  --accent-primary: #ffffff;
+  --accent-primary-fg: #000000;
+  --status-ok: #22c55e;
+  --status-warn: #f59e0b;
+  --status-danger: #ef4444;
+
+  /* Three-Color Grayscale Gradient Text */
+  --text-g1: #ffffff;
+  --text-g2: #d4d4d4;
+  --text-g3: #a6a6a6;
+
+  --inv-g1: #000000;
+  --inv-g2: #121212;
+  --inv-g3: #262626;
+}

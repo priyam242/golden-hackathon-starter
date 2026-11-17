@@ -1,0 +1,70 @@
+{
+  "app": {
+    "title": "Frontend Arsenal",
+    "subtitle": "Universal Hackathon Frontend Infrastructure"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "items": "Catalog",
+    "cart": "Cart",
+    "chat": "Chat",
+    "ai": "AI Assistant",
+    "admin": "Admin",
+    "profile": "Profile",
+    "settings": "Settings",
+    "login": "Sign In",
+    "register": "Sign Up",
+    "logout": "Sign Out"
+  },
+  "auth": {
+    "welcomeBack": "Welcome Back",
+    "enterCredentials": "Enter your email and password to access your dashboard.",
+    "createAccount": "Create an Account",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "demoCredentials": "Click below to fill test credentials instantly:"
+  },
+  "items": {
+    "title": "Arsenal Catalog",
+    "subtitle": "Browse high-performance developer gear and infrastructure.",
+    "searchPlaceholder": "Search by title, tag, or description...",
+    "allCategories": "All Categories",
+    "sortBy": "Sort By",
+    "priceLowHigh": "Price: Low to High",
+    "priceHighLow": "Price: High to Low",
+    "newest": "Newest First",
+    "addToCart": "Add to Cart",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "viewDetails": "View Details"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your shopping cart is empty.",
+    "subtotal": "Subtotal",
+    "tax": "Estimated GST (18%)",
+    "discount": "Coupon Discount",
+    "total": "Total Amount",
+    "checkout": "Proceed to Checkout",
+    "couponPlaceholder": "Enter coupon code",
+    "apply": "Apply"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try Again",
+    "success": "Action Successful",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save Changes",
+    "delete": "Delete"
+  }
+}
+
